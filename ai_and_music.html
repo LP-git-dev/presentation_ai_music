@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ma présentation</title>
+
+      <link rel="stylesheet" href="dist/reveal.css">
+      <link rel="stylesheet" href="dist/theme/white.css">
+      <link rel="stylesheet" href="css/theme-pictet-inspire.css">
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <section>
+          <h1>AI research talk</h1>
+
+          <p>Review of the article:
+            DeepBach: a Steerable Model for Bach Chorales Generation </p>
+
+          <p>Roberta Tsang and Luc Pétiard, 2026</p>
+          <figure>
+		      <img src="images/bach_piano.png" alt="Description de la photo" style="width: 20%; height: auto;">
+          </figure>
+          <!--Every good AI talk should start with graph of what was done before -->
+        </section>
+
+	  
+        <section> 
+          <h2>Example</h2>
+          <p>
+            Let $\mathbb{R}$ be the set of real numbers.
+            A function $f:\mathbb{R} \to \mathbb{R}$ is linear if the following property holds:
+          </p>
+          <p>
+            for every $x,y \in \mathbb{R}$,
+            $$f(\lambda x+y) = \lambda f(x) + f(y)$$
+          </p>
+        </section>
+
+        <section>
+          <object
+            data="./deepbach_a_steerable_model_for_bach_chorales_generation.pdf#page=1"
+            type="application/pdf"
+            width="90%"
+            height="650">
+            <a href="./deepbach_a_steerable_model_for_bach_chorales_generation.pdf">
+              Ouvrir le PDF
+            </a>
+          </object>
+        </section>
+
+        <section>
+          <h2>Thank you!</h2>
+        </section>
+
+
+
+      </div>
+    </div>
+
+
+    <script src="dist/reveal.js"></script>
+
+    <!-- Plugin mathématique de reveal.js -->
+    <script src="dist/plugin/math.js"></script>
+
+    <script>
+      Reveal.initialize({
+        hash: true,
+        slideNumber: true,
+
+        // Activation du rendu LaTeX avec KaTeX
+        plugins: [RevealMath.KaTeX]
+      });
+    </script>
+  </body>
+</html>
