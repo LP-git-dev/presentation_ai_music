@@ -1,0 +1,278 @@
+/* ==================================================
+   Thème reveal.js inspiré de l'univers Pictet
+   ================================================== */
+
+:root {
+  --ivoire: #f2efe8;
+  --papier: #faf8f3;
+  --encre: #172b2a;
+  --vert-profond: #123b38;
+  --cuivre: #b8663d;
+  --gris: #6e7471;
+  --ligne: #c9c5bb;
+
+  --police-titre: Georgia, "Times New Roman", serif;
+  --police-texte: Arial, Helvetica, sans-serif;
+}
+
+/* Arrière-plan général */
+
+.reveal-viewport {
+  background: var(--ivoire);
+}
+
+/* Typographie générale */
+
+.reveal {
+  color: var(--encre);
+  font-family: var(--police-texte);
+  font-size: 34px;
+  font-weight: 400;
+}
+
+.reveal .slides {
+  text-align: left;
+}
+
+/* Titres */
+
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  color: var(--vert-profond);
+  font-family: var(--police-titre);
+  font-weight: 400;
+  line-height: 1.08;
+  text-transform: none;
+  letter-spacing: -0.025em;
+  text-shadow: none;
+}
+
+.reveal h1 {
+  max-width: 900px;
+  font-size: 2.6em;
+}
+
+.reveal h2 {
+  margin-bottom: 0.7em;
+  font-size: 1.8em;
+}
+
+.reveal h3 {
+  color: var(--cuivre);
+  font-size: 1.2em;
+}
+
+/* Paragraphes et listes */
+
+.reveal p,
+.reveal li {
+  line-height: 1.45;
+}
+
+.reveal li {
+  margin-bottom: 0.35em;
+}
+
+.reveal ul {
+  list-style: none;
+  margin-left: 0;
+}
+
+.reveal ul li {
+  position: relative;
+  padding-left: 0.85em;
+}
+
+.reveal ul li::before {
+  content: "-";
+  position: absolute;
+  left: 0;
+  top: 0.15em;
+  color: var(--cuivre);
+  font-size: 0.65em;
+}
+
+.reveal ul li {
+  position: relative;
+  padding-left: 0.65em;
+}
+
+/* Éléments d'accent */
+
+.reveal strong {
+  color: var(--vert-profond);
+  font-weight: 600;
+}
+
+.reveal em {
+  color: var(--cuivre);
+}
+
+.reveal a {
+  color: var(--cuivre);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+
+/* Ligne éditoriale au-dessus des diapositives */
+
+.reveal section:not(.slide-titre)::before {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+  margin-bottom: 32px;
+  background: var(--cuivre);
+}
+
+/* Formules mathématiques */
+
+.reveal .katex {
+  color: var(--vert-profond);
+}
+
+.reveal .katex-display {
+  margin: 1em 0;
+  padding: 0.65em;
+  background: rgb(255 255 255 / 45%);
+  border-left: 4px solid var(--cuivre);
+}
+
+/* Fragments */
+
+.reveal .fragment {
+  transition-duration: 0.35s;
+}
+
+.reveal .fragment.visible {
+  opacity: 1;
+}
+
+/* Numéro de diapositive */
+
+.reveal .slide-number {
+  right: 28px;
+  bottom: 22px;
+  color: var(--gris);
+  font-family: var(--police-texte);
+  font-size: 14px;
+  background: transparent;
+}
+
+/* Barre de progression */
+
+.reveal .progress {
+  height: 3px;
+  color: var(--cuivre);
+}
+
+/* ==================================================
+   Variantes de diapositives
+   ================================================== */
+
+/* Page de titre */
+
+.reveal .slide-titre {
+  text-align: left;
+}
+
+.reveal .slide-titre .surtitre {
+  margin-bottom: 2em;
+  color: var(--cuivre);
+  font-size: 0.55em;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.reveal .slide-titre h1 {
+  margin-bottom: 0.35em;
+}
+
+.reveal .slide-titre .sous-titre {
+  max-width: 800px;
+  color: var(--gris);
+  font-family: var(--police-titre);
+  font-size: 0.85em;
+}
+
+/* Diapositive sombre */
+
+.reveal .slide-sombre {
+  color: var(--papier);
+}
+
+.reveal .slide-sombre h1,
+.reveal .slide-sombre h2,
+.reveal .slide-sombre h3,
+.reveal .slide-sombre .katex {
+  color: var(--papier);
+}
+
+/* Grand résultat */
+
+.reveal .slide-resultat {
+  text-align: center;
+}
+
+.reveal .slide-resultat::before {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.reveal .slide-resultat .grand-nombre {
+  margin: 0;
+  color: var(--cuivre);
+  font-family: var(--police-titre);
+  font-size: 3.5em;
+  line-height: 1;
+}
+
+/* Citation ou théorème */
+
+.reveal blockquote {
+  width: auto;
+  margin: 1em 0;
+  padding: 0.3em 0 0.3em 0.8em;
+  color: var(--vert-profond);
+  font-family: var(--police-titre);
+  font-size: 1.15em;
+  font-style: normal;
+  line-height: 1.4;
+  background: transparent;
+  border-left: 4px solid var(--cuivre);
+  box-shadow: none;
+}
+
+
+.reveal .page-integree {
+  width: 100%;
+  height: 600px;
+  background: var(--papier);
+  border: 1px solid var(--gris-bleu-clair);
+  border-radius: 4px;
+  box-shadow: 0 12px 35px rgb(23 43 42 / 12%);
+}
+
+.item-swap {
+  display: grid;
+}
+
+.item-swap > * {
+  grid-area: 1 / 1;
+}
+
+/* Petits écrans */
+
+@media (max-width: 800px) {
+  .reveal {
+    font-size: 26px;
+  }
+}
+
+/* Figures */
+.reveal figure {
+  margin: 0 auto;
+  text-align: center;
+}
